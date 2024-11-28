@@ -47,7 +47,7 @@ def plot_orth_axes_saturation(P_T, save_path, iter=None):
         plt.title("Step: "+str(iter))
     plt.tight_layout()
     
-    plt.savefig(save_path + "orthogonal_" + str(iter)+'.png', dpi=50)
+    plt.savefig(f"{save_path}orthogonal_{iter}.png", dpi=50)
     plt.clf()
     plt.close()
 
@@ -73,9 +73,9 @@ def plot_image(P_T, save_path, num_rows = 10, iter=None):
     plt.tight_layout()
     
     if iter != None:
-        plt.savefig(save_path + str(iter)+'.png')
+        plt.savefig(save_path + str(iter)+'.png', bbox_inches='tight', pad_inches=0)
     else:
-        plt.savefig(save_path +'.png')
+        plt.savefig(save_path +'.png', bbox_inches='tight', pad_inches=0)
     plt.clf()
     plt.close()
     
